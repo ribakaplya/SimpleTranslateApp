@@ -5,13 +5,13 @@ import com.example.translator.entity.TranslateResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 @Component
 public class JsonReader {
@@ -37,17 +37,12 @@ public class JsonReader {
         return null;
     }
 
-    public String getLanguageFromFile() throws FileNotFoundException {
-        StringBuilder jsonStringBuilder = new StringBuilder();
+    public String getLanguageFromFile() {
         String jsonPath = "./src/main/resources/languages.json";
-        File jsonFile = new File(jsonPath);
         try {
-            Scanner jsonScanner = new Scanner(jsonFile);
-            while (jsonScanner.hasNextLine()) {
-                jsonStringBuilder.append(jsonScanner.nextLine()).append("\n");
-            }
-            return jsonStringBuilder.toString();
-        } catch (FileNotFoundException e) {
+            byte[] encoded = Files.readAllBytes(Paths.get(jsonPath));
+            return new String(encoded, StandardCharsets.UTF_8);
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
