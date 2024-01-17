@@ -1,0 +1,10 @@
+translate:
+  speller: true #проверка орфографии
+  folder_id: b1g9j5t09b1khafghdme
+  token: t1.9euelZqTkI7Pz5zMiYqNnJqSi8jKiu3rnpWazZTIyc6Xm8nKk5HHjp7OlYrl9Pc_A2BS-e91dE-D3fT3fzFdUvnvdXRPg83n9euelZrLmI_Gksydz4uVz56Plo2Mi-_8xeuelZrLmI_Gksydz4uVz56Plo2Miw.Yxq7fnn5zIh95xQ7coHn7J5WG8fVnPSVHrxcfDShXaVljFE9DjraBiqVykT4CD5MHYUHHC8BMJnh0iqaSH_LBg
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true

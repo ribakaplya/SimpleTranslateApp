@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .input-field {
+        width: 600px;
+    }
+    body {
+        text-align: center;
+    }
+    body input, body button, body select, label {
+        font-size: 2em;
+    }
+    label {
+        font-size: 2em;
+        line-height: 2;
+    }
+</style>
+<header>
+    <title>Перевод текста</title>
+</header>
+<body>
+<a href="/data"">Лог запросов</a>
+<div>
+    <form method="post">
+        <div><select type="text" name="sourceLang">
+            {{#lang}}
+                <option value="{{code}}">{{code}} — {{name}}</option>
+            {{/lang}}
+        </select>
+            <label>→</label>
+            <select type="text" name="targetLang">
+                {{#lang}}
+                    <option value="{{code}}">{{code}} — {{name}}</option>
+                {{/lang}}
+            </select>
+        </div>
+        <input class="input-field" type="text" name="text" maxlength="1000" placeholder="Введите текст для перевода"
+               autofocus>
+        <button type="submit">Перевести</button>
+    </form>
+</div>
+<div></div>
+<div>
+    {{#messages}}
+        <b>{{sourceLang}}</b>→
+        <b>{{targetLang}}</b>
+    {{/messages}}
+</div>
+<div>
+    {{#messages}}
+        <d>{{text}}</d>→
+        <d>{{result}}</d>
+    {{/messages}}
+</div>
+</body>
+</html>

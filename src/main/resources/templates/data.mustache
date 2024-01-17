@@ -1,0 +1,41 @@
+<html>
+<style>
+    .column {
+        padding: 0 40px;
+    }
+    thead {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+</style>
+<header>
+    <title>Лог перевода</title>
+</header>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>timestamp</th>
+        <th>requestId</th>
+        <th>request</th>
+        <th>response</th>
+        <th>sourceLang</th>
+        <th>targetLang</th>
+        <th>IP</th>
+    </tr>
+    </thead>
+    {{#messages}}
+        <tr>
+            <td class="column">{{id}}</td>
+            <td class="column">{{dateTime}}</td>
+            <td class="column">{{requestId}}</td>
+            <td class="column">{{request}}</td>
+            <td class="column">{{response}}</td>
+            <td class="column">{{requestLang}}</td>
+            <td class="column">{{responseLang}}</td>
+            <td class="column">{{responseIp}}</td>
+        </tr>
+    {{/messages}}
+</table>
+</html>
