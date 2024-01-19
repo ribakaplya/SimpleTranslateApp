@@ -1,10 +1,13 @@
-package com.example.h2.bl;
+package com.example.database.connection;
+
+import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Util {
+@Service
+public class ConnectionUtil {
     private static final String DB_DRIVER = "org.h2.Driver";
     private static final String DB_URL = "jdbc:h2:./test";
     private static final String DB_USERNAME = "sa";

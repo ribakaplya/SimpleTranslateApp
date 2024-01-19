@@ -1,4 +1,4 @@
-package com.example.h2.entity;
+package com.example.database.model;
 
 import org.springframework.stereotype.Component;
 
@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Component
-public class Data {
+public class RequestLogDto {
 
     private Long id;
     private Timestamp dateTime;
@@ -17,7 +17,7 @@ public class Data {
     private String responseLang;
     private String responseIp;
 
-    public Data() {
+    public RequestLogDto() {
     }
 
     public Long getId() {
@@ -88,8 +88,8 @@ public class Data {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Data data = (Data) o;
-        return Objects.equals(id, data.id) && Objects.equals(dateTime, data.dateTime) && Objects.equals(requestId, data.requestId) && Objects.equals(request, data.request) && Objects.equals(response, data.response) && Objects.equals(requestLang, data.requestLang) && Objects.equals(responseLang, data.responseLang) && Objects.equals(responseIp, data.responseIp);
+        RequestLogDto requestLogDto = (RequestLogDto) o;
+        return Objects.equals(id, requestLogDto.id) && Objects.equals(dateTime, requestLogDto.dateTime) && Objects.equals(requestId, requestLogDto.requestId) && Objects.equals(request, requestLogDto.request) && Objects.equals(response, requestLogDto.response) && Objects.equals(requestLang, requestLogDto.requestLang) && Objects.equals(responseLang, requestLogDto.responseLang) && Objects.equals(responseIp, requestLogDto.responseIp);
     }
 
     @Override

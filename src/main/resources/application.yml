@@ -1,7 +1,9 @@
 translate:
+  url: https://translate.api.cloud.yandex.net/translate/v2
+  languages-path: ./src/main/resources/languages.json
   speller: true #проверка орфографии
   folder_id: b1g9j5t09b1khafghdme
-  token: t1.9euelZqTkI7Pz5zMiYqNnJqSi8jKiu3rnpWazZTIyc6Xm8nKk5HHjp7OlYrl9Pc_A2BS-e91dE-D3fT3fzFdUvnvdXRPg83n9euelZrLmI_Gksydz4uVz56Plo2Mi-_8xeuelZrLmI_Gksydz4uVz56Plo2Miw.Yxq7fnn5zIh95xQ7coHn7J5WG8fVnPSVHrxcfDShXaVljFE9DjraBiqVykT4CD5MHYUHHC8BMJnh0iqaSH_LBg
+  token: t1.9euelZqLi56Kj47GycrHlpaJlMyRke3rnpWazZTIyc6Xm8nKk5HHjp7OlYrl8_cGTlZS-e9UEWBD_N3z90Z8U1L571QRYEP8zef1656Vms3MmcaNjZ7PmJONmM-ZkY2d7_zF656Vms3MmcaNjZ7PmJONmM-ZkY2d.4M0-fp7o7GE_Y6E6g412u0S4w8dptGvpEngTFHewO1PYCe2NzehMxUlfpGO79pKdFVjfBCt84pR20toMdZoQAA
 
 server:
   servlet:

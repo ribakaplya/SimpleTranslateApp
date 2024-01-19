@@ -1,4 +1,4 @@
-package com.example.translator.entity;
+package com.example.integration.yandex.entity;
 
 import java.util.Objects;
 

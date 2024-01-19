@@ -353,7 +353,7 @@ Invalid value "8" for parameter "parameterIndex" [90008-224]
 	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
 	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1408)
 	at org.h2.jdbc.JdbcPreparedStatement.setString(JdbcPreparedStatement.java:391)
-	at com.example.h2.service.DataService.add(DataService.java:30)
+	at com.example.h2.dao.impl.RequestLogRepositoryImpl.add(DataService.java:30)
 	at com.example.h2.Domain.addTestData(Domain.java:26)
 	at com.example.h2.TestData.main(TestData.java:6)
 2024-01-17 03:47:33.247563+03:00 jdbc[3]: exception
@@ -365,7 +365,7 @@ Invalid value "8" for parameter "parameterIndex" [90008-224]
 	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
 	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1408)
 	at org.h2.jdbc.JdbcPreparedStatement.setString(JdbcPreparedStatement.java:391)
-	at com.example.h2.service.DataService.add(DataService.java:30)
+	at com.example.h2.dao.impl.RequestLogRepositoryImpl.add(DataService.java:30)
 	at com.example.h2.Domain.addTestData(Domain.java:26)
 	at com.example.h2.TestData.main(TestData.java:6)
 2024-01-17 23:37:42.284007+03:00 jdbc[3]: exception

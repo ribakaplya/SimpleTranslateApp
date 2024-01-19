@@ -1,4 +1,4 @@
-package com.example.translator.entity;
+package com.example.integration.yandex.entity;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -9,13 +9,11 @@ import java.util.Objects;
 @Component
 public class TranslateData {
 
-    public String sourceLanguageCode;
-    public String targetLanguageCode;
-    public List<String> texts;
-    @Value("${translate.folder_id}")
-    public String folderId;
-    @Value("${translate.speller}")
-    public Boolean speller;
+    private String sourceLanguageCode;
+    private String targetLanguageCode;
+    private List<String> texts;
+    private String folderId;
+    private Boolean speller;
 
     public String getSourceLanguageCode() {
         return sourceLanguageCode;
@@ -47,6 +45,10 @@ public class TranslateData {
 
     public void setFolderId(String folderId) {
         this.folderId = folderId;
+    }
+
+    public void setSpeller(Boolean speller) {
+        this.speller = speller;
     }
 
     public Boolean getSpeller() {
